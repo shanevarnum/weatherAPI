@@ -5,13 +5,15 @@ Styling for Weather Application
 body {
   width: 800px;
   margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
-  background-image: url("1.jpg")
+  font-family: 'DejaVu Sans Mono', monospace;
+  background-size: cover;
 }
 
 .container {
-  width: 600px;
+  width: 700px;
   margin: 0 auto;
+  margin-top: 440px;
+  font-family: 'DejaVu Sans Mono', monospace;
 }
 
 fieldset {
@@ -23,22 +25,21 @@ fieldset {
   -webkit-padding-end: 0em;
   -webkit-padding-after: 0em;
   border: 0px;
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
-  min-width: -webkit-min-content;
   padding: 30px;
+  font-family: 'DejaVu Sans Mono', monospace;
+  font-size: 20px;
 
 }
 
 .ghost-input, p {
   display: block;
   font-weight:300;
+  font-family: 'DejaVu Sans Mono', monospace;
+  text-align: center;
   width: 100%;
-  font-size: 25px;
+  font-size: 23px;
   border:0px;
+  border-radius: 25px;
   outline: none;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -46,7 +47,6 @@ fieldset {
   box-sizing: border-box;
   color: #4b545f;
   background: #fff;
-  font-family: Open Sans,Verdana;
   padding: 10px 15px;
   margin: 30px 0px;
   -webkit-transition: all 0.1s ease-in-out;
@@ -59,11 +59,16 @@ fieldset {
 
 .ghost-input:focus {
   border-bottom:1px solid #ddd;
+  font-family: 'DejaVu Sans Mono', monospace;
 }
 
 .ghost-button {
-  background-color: white;
-  border:2px solid #ddd;
+  background-color: rgb(52, 160, 118);
+  border:2px solid rgb(92, 89, 89);
+  border-radius: 25px;
+  color: white;
+  font-size: 20px;
+  font-family: 'DejaVu Sans Mono', monospace;
   padding:10px 30px;
   width: 100%;
   min-width: 350px;
@@ -75,9 +80,134 @@ fieldset {
 }
 
 .ghost-button:hover {
-  border:2px solid #515151;
+  border:2px solid #080808;
 }
 
 p {
+  font-family: 'DejaVu Sans Mono', monospace;
   color: black;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'DejaVu Sans Mono', monospace;
+  font-size: 60px;
+  margin-top: 60px;
+  color: white;
+}
+
+body {
+  background:#2EB5E5 ;
+}
+
+.sun { 
+  position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom: 120px;
+	margin: auto;  
+	width:70px;
+	height:70px;
+	border-radius:50%;	
+	background:white;
+	opacity:0.9;			
+	box-shadow: 0px 0px 40px 15px white;  
+}
+
+.ray_box {
+  position: absolute;
+  margin: auto;
+	top:0px;
+	left:0;
+	right:0;
+	bottom:0;	
+  width:70px;  
+  -webkit-animation: ray_anim 120s linear infinite;
+  animation: ray_anim 120s linear infinite;
+}
+.ray {  
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+		background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
+    margin-left:10px;
+    border-radius:80% 80% 0 0;
+    position:absolute;
+    opacity:0.1;
+}
+
+.ray1 {    
+    height:170px;
+    width:30px;
+   -webkit-transform: rotate(180deg);
+    top:-175px;
+    left: 15px;
+}
+.ray2 {
+    height:100px;
+    width:8px;
+   -webkit-transform: rotate(220deg);
+    top:-90px;
+    left: 75px;
+}
+.ray3 {
+    height:170px;
+    width:50px;
+   -webkit-transform: rotate(250deg);
+    top:-80px;
+    left: 100px;
+}
+.ray4 {
+    height:120px;
+    width:14px;
+   -webkit-transform: rotate(305deg);
+    top:30px;
+    left: 100px;
+}
+.ray5 {
+    height:140px;
+    width:30px;
+   -webkit-transform: rotate(-15deg);
+    top:60px;
+    left: 40px;
+}
+.ray6 {
+    height:90px;
+    width:50px;
+   -webkit-transform: rotate(30deg);
+    top:60px;
+    left: -40px;
+}
+.ray7 {
+    height:180px;
+    width:10px;
+   -webkit-transform: rotate(70deg);
+    top:-35px;
+    left: -40px;
+}
+.ray8 {
+    height:120px;
+    width:30px;
+   -webkit-transform: rotate(100deg);
+    top:-45px;
+    left:-90px;
+}
+.ray9 {
+    height:80px;
+    width:10px;
+   -webkit-transform: rotate(120deg);
+    top:-65px;
+    left:-60px;
+}
+.ray10 {
+    height:190px;
+    width:23px;
+   -webkit-transform: rotate(150deg);
+    top:-185px;
+    left: -60px;
+}
+
+
+@-webkit-keyframes ray_anim { 
+		0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}    
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
 }

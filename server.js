@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 // post request that logs the value of 'city' to the console
 app.post('/', (req, res) => {
   let city = req.body.city;
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=Metric&appid=${apiKey}`
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
 
   request(url, function (err, response, body) {
     if(err){
@@ -28,8 +28,8 @@ app.post('/', (req, res) => {
       if(weather.main == undefined){
         res.render('index', {weather: null, error: 'Error, please try again'});
       } else {
-        let weatherText = `It's ${weather.main.temp} degrees in ${weather.name}!`;
-        res.render('index', {weather: weatherText, error: null});
+        let weatherTemp = `The temperature in ${weather.name} is ${weather.main.temp} degrees(F). Forecasts call for ${weather.weather[0].description}`;
+        res.render('index', {weather: weatherTemp, error: null});
       }
     }
   });
